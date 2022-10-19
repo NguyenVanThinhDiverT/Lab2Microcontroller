@@ -23,6 +23,7 @@ void openEN(int state);
 void displayClock(int hour, int minute);
 void blinkLED();
 void updateClockBuffer();
+void update7SEG(int index);
 void getBuffer(uint8_t buffer);
 void openENM(int index);
 void clearENM();

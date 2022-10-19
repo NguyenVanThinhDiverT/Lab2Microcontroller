@@ -10,9 +10,10 @@
 
 extern int EN_flag;
 extern int LED_flag;
-
+extern int timer1_flag;
 void setTimer_EN(int duration);
 void setTimer_LED(int duration);
+void setTimer1(int duration);
 void timerRun();
 
 

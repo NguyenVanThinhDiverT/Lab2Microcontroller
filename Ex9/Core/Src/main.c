@@ -94,23 +94,51 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim2);
   initGPIO();
   int index = 0;
-  int counter = 5;
-  setTimer_EN(counter);
+  setTimer_EN(25);
+  int index2 = 0;
+  setTimer_LED(100);
+  setTimer1(5);
+  clear7SEG();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    if(EN_flag == 1)
-    {
-	  setTimer_EN(counter);
-	  clearENM();
-	  openENM(index);
-	  updateLEDMatrix(index);
-	  index++;
-	  if(index > 7) index = 0;
-    }
+	    if(timer1_flag == 1)
+	    {
+		  setTimer1(5);
+		  clearENM();
+		  openENM(index);
+		  updateLEDMatrix(index);
+		  index++;
+		  if(index > 7) index = 0;
+	    }
+	  if(EN_flag == 1){
+		  second++;
+		  if(second >= 60){
+			  second = 0;
+			  minute++;
+		  }
+		  if(minute >= 60){
+			  minute = 0;
+			  hour++;
+		  }
+		  if(hour >= 24){
+			  hour = 0;
+		  }
+		  updateClockBuffer();
+		  update7SEG(index2);
+		  index2++;
+		  if(index2 > 3) index2 = 0;
+		  setTimer_EN(25);
+  	  }
+	if(LED_flag == 1){
+		  blinkLED();
+		  setTimer_LED(100);
+	  }
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

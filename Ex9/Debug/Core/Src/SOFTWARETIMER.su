@@ -1,3 +1,4 @@
-SOFTWARETIMER.c:15:6:setTimer_EN	16	static
-SOFTWARETIMER.c:19:6:setTimer_LED	16	static
-SOFTWARETIMER.c:23:6:timerRun	4	static
+SOFTWARETIMER.c:16:6:setTimer_EN	16	static
+SOFTWARETIMER.c:20:6:setTimer_LED	16	static
+SOFTWARETIMER.c:24:6:setTimer1	16	static
+SOFTWARETIMER.c:29:6:timerRun	4	static
