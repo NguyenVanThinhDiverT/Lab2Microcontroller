@@ -1,0 +1,9 @@
+LED.c:22:6:clear7SEG	8	static
+LED.c:26:6:display7SEG	16	static
+LED.c:71:6:initState	4	static
+LED.c:74:6:openEN	16	static
+LED.c:88:6:clearEN	8	static
+LED.c:95:6:displayClock	16	static
+LED.c:127:6:blinkLED	8	static
+LED.c:133:6:update7SEG	16	static
+LED.c:169:6:updateClockBuffer	4	static
