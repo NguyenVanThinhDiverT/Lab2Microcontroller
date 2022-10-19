@@ -1,0 +1,4 @@
+LED.c:13:6:clear7SEG	8	static
+LED.c:17:6:display7SEG	16	static
+LED.c:63:6:blinkLED	8	static
+LED.c:69:6:changeEN	8	static
